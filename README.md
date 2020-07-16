@@ -9,7 +9,7 @@ devtools::install_github('kehongjie/RobustDC')
 
 # Main Functions
 Two main functions in this package are `RDC` and `RDC.lasso`. `RDC` is for screening with robust distance correlation, and `RDC.lasso` is for 
-fitting the final LASSO regularized regression model as RDC. You can always use the following command to see details:
+fitting the final LASSO regularized regression model after RDC. You can always use the following command to see more details:
 ```
 library(RobustDC)
 ?RDC
