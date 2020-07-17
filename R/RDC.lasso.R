@@ -11,8 +11,9 @@
 ##' @param rdc.stat Robust distance correlation for each predictors, usually
 ##' the output of \code{RDC} function.
 ##' @param nrdc Number of pedictors recuited by RDC.
-##' @param lambda Optional user-supplied lambda sequence, as in \code{glmnet}.
-##' The default is \code{NULL}, and \code{glmnet} chooses its own sequence.
+##' @param lambda Optional user-supplied lambda sequence, as in package
+##' \pkg{glmnet}.The default is \code{NULL}, and \code{glmnet} chooses its
+##' own sequence.
 ##' @param nfolds Number of folds for cross-validation, default is 10.
 ##' @param type.measure Loss to use for cross-validation, as in package
 ##' \pkg{glmnet}. It can be "deviance", "mse" or "mae" for the qutitative
