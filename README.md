@@ -1,8 +1,8 @@
 # RobustDC
-This package implements a Huber-type robust distance correlation measure (called "Robust DC" or "RDC") for sure screening in ultrahigh-dimensional heavy-tailed data.
+This R package implements a Huber-type robust distance correlation measure (called "Robust DC" or "RDC") for sure screening in ultrahigh-dimensional heavy-tailed data.
 
 # Installation
-To install the `CoxTOTEM` package, you will first need to install `devtools` package and then execute the following code: 
+To install the `RobustDC` package, you will first need to install `devtools` package and then execute the following code: 
 ```
 devtools::install_github('kehongjie/RobustDC')
 ```
