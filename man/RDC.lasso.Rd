@@ -26,8 +26,9 @@ the output of \code{RDC} function.}
 
 \item{nrdc}{Number of pedictors recuited by RDC.}
 
-\item{lambda}{Optional user-supplied lambda sequence, as in \code{glmnet}.
-The default is \code{NULL}, and \code{glmnet} chooses its own sequence.}
+\item{lambda}{Optional user-supplied lambda sequence, as in package
+\pkg{glmnet}.The default is \code{NULL}, and \code{glmnet} chooses its
+own sequence.}
 
 \item{nfolds}{Number of folds for cross-validation, default is 10.}
 
