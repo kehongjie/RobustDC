@@ -71,7 +71,7 @@ RDC <- function(x, y, c1=0.5) {
   for(j in 1:p) {
     # if(j%%100==0) print(j)
 
-    xj = x[,j]
+    xj <- x[,j]
 
     xj_diff <- as.numeric(dist(xj))
 
@@ -79,14 +79,14 @@ RDC <- function(x, y, c1=0.5) {
     xj_mat_trun <- abs(outer(xj_trun,xj_trun,'-'))
     xj_diff_trun <- as.numeric(xj_mat_trun)
 
-    s1xy[j] = mean(xj_diff_trun*y_diff_trun)
-    s2xy[j] = mean(xj_diff_trun)*mean(y_diff_trun)
+    s1xy[j] <- mean(xj_diff_trun*y_diff_trun)
+    s2xy[j] <- mean(xj_diff_trun)*mean(y_diff_trun)
     s3xy[j] <- (sum(S3xycpp(index.comb3, xj_mat_trun,y_mat_trun)) +
                   sum(S3xycpp_v2(index.comb2, xj_mat_trun, y_mat_trun )))/n^3
 
-    s1xx[j] = mean(xj_diff_trun*xj_diff_trun)
-    s2xx[j] = mean(xj_diff_trun)*mean(xj_diff_trun)
-    s3xx[j] = (sum(S3xxcpp(index.comb3, xj_mat_trun)) +
+    s1xx[j] <- mean(xj_diff_trun*xj_diff_trun)
+    s2xx[j] <- mean(xj_diff_trun)*mean(xj_diff_trun)
+    s3xx[j] <- (sum(S3xxcpp(index.comb3, xj_mat_trun)) +
                  sum(S3xxcpp_v2(index.comb2, xj_mat_trun)))/n^3
 
     rdvarx[j] <- s1xx[j] + s2xx[j] - 2*s3xx[j]
@@ -106,7 +106,7 @@ trunc <- function(Z,Y,t,n){
   f <- function(tau){
     mean(  ( (Z^4 + tau^4 ) - abs( tau^4 - Z^4 )  ) /2  /(tau^4)  ) -  t/n
   }
-  tau = uniroot(f, interval=c(1e-20,1e20),extendInt="yes")$root
+  tau <- uniroot(f, interval=c(1e-20,1e20),extendInt="yes")$root
   Y_trunc <- pmin(abs(Y),tau)*sign(Y)
   return(Y_trunc)
 }
