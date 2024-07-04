@@ -2,5 +2,3 @@
 
 export(RDC)
 export(RDC.lasso)
-importFrom(Rcpp,sourceCpp)
-useDynLib(RobustDC)

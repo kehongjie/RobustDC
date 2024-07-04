@@ -1,7 +1,7 @@
 Package: RobustDC
 Title: A Robust Distance Correlation Measure for Sure Screening in heavy-tailed data.
 Version: 1.0
-Date: 2020-07-14
+Date: 2024-07-04
 Description: The package implements a Huber-type robust distance correlation measure
 	(called "Robust DC") for sure screening in ultrahigh-dimensional heavy-tailed 
 	data. 
@@ -9,17 +9,14 @@ License: GPL (>= 2)
 Encoding: UTF-8
 Authors@R: c(
     person("Tianzhou", "Ma", role = "aut"),
-    person("Zhao", "Ren", role = "aut"),
-    person("Hongjie", "Ke", email = "kehj@terpmail.umd.edu", role = c("aut", "cre")))
-Author: Tianzhou Ma [aut],
-    Zhao Ren [aut],
-    Hongjie Ke [aut, cre].
+    person("Fan", "Yang", role = "aut"),
+    person("Hongjie", "Ke", email = "kehj@terpmail.umd.edu", role = c("aut", "cre")),
+    person("Zhao", "Ren", role = "aut"))
 Maintainer: Hongjie Ke <kehj@terpmail.umd.edu>
 Depends: R (>= 3.2.4)
-Imports: Rcpp (>= 0.12.9), RcppArmadillo, MASS, glmnet
-LinkingTo: Rcpp (>= 0.12.9), RcppArmadillo
+Imports: MASS, glmnet, stats
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.0
+RoxygenNote: 7.3.1
 NeedsCompilation: yes
-Packaged: 2020-07-14 10:38:21 UTC; kehongjie
-Date/Publication: 2020-07-14 10:38:21 UTC
+Packaged: 2024-07-04 17:25:21 UTC; kehongjie
+Date/Publication: 2024-07-04 17:25:21 UTC

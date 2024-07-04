@@ -4,16 +4,21 @@
 \alias{RDC}
 \title{Robust Distance Correlation for Sure Screening.}
 \usage{
-RDC(x, y, c1 = 0.5)
+RDC(x, y, c4 = 2, c2 = 2, auto = FALSE)
 }
 \arguments{
 \item{x}{Predictors, a matrix of dimensions n * p.}
 
 \item{y}{Response variables, a vector of length n.}
 
-\item{c1}{Truncation parameter, which will further be used to sovle for the
-robustification parameter \code{gamma}. See the paper for details. The larger
-c1, the more truncation. Default is 0.5.}
+\item{c4}{Truncation parameter, which will further be used to solve for the
+robustification parameter \eqn{\tau}. See the paper for details. Default is 2.}
+
+\item{c2}{Truncation parameter, which will further be used to solve for the
+robustification parameter \eqn{\tau \prime}. See the paper for details. Default is 2.}
+
+\item{auto}{If TRUE, then the parameter c2 would automatically be tuned
+based on c4. Default is FALSE.}
 }
 \value{
 A vector of screening statistics for each predictor.
@@ -42,7 +47,7 @@ for(j in 1:p){
 }
 y <- x\%*\%beta + rnorm(n)
 ## Robust DC
-rdc.stat <- RDC(x,y,c1=0.5)
+rdc.stat <- RDC(x,y)
 
 }
 }

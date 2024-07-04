@@ -54,7 +54,7 @@
 ##' }
 ##' y <- x%*%beta + rnorm(n)
 ##' ## Robust DC
-##' rdc.stat <- RDC(x,y,c1=0.5)
+##' rdc.stat <- RDC(x,y)
 ##' ## LASSO
 ##' lasso.fit <- RDC.lasso(x,y,rdc.stat,nrdc=100)
 ##' print(lasso.fit$rdc.idx)
